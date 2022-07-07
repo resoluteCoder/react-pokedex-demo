@@ -1,38 +1,83 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* flex-direction: column; */
   justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.pokedex {
+  background-color: #282c34;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-image: url('https://wallpapercave.com/wp/wp3170168.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 500px;
+  width: 280px;
 }
 
-.App-link {
-  color: #61dafb;
+.pokemon {
+  position: relative;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 125px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-form {
+  position: relative;
+  top: 63%;
+  left: 50%;
+}
+
+.search {
+  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 230px;
+  z-index: 3;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.toggle-buttons {
+  position: absolute;
+  top: 11%;
+  right: 4%;
+  display: flex;
+}
+
+.toggle-details-button {
+  position: absolute;
+  top: 7%;
+  left: 5%;
+  height: 67px;
+  width: 70px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.dots {
+  margin-right: 4px;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.moves-list {
+  height: 200px;
+  overflow: auto;
+  width: 200px;
+  border: 1px solid gray;
+  margin-left: 50px;
 }
